@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="is">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Emil Árnason - Ferilskrá</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
+
 <body>
 
     <div class="resume-container">
-        <a href="index-en.html">English</a>
-        <a href="index-fr.html">Français</a>
+        <div class="no-print">
+            <!--  <a href="index-en.html">English</a>-->
+            <a href="index-en.html" id="page-language"><img src="img/uk.png" alt=""></a>
+            <!--   <a href="index-fr.html">Français</a>-->
+            <a href="index-fr.html" id="page-language"><img src="img/france.jpeg" alt=""></a>
+            <button id="download-btn" title="Hlaða niður ferilskrá"><img src="img/download.png" alt="Download"></button>
+        </div>
+
+
+
+
+
         <header class="header">
             <h1>Emil Árnason</h1>
             <p>Nemi í Tölvunarfræði</p>
             <div class="contact-info">
                 <p>Tölvupóstur: emil.arna@gmail.com</p>
                 <p>Sími: 772-4557</p>
-                
+
             </div>
         </header>
 
         <section class="summary">
             <h2>Um mig</h2>
-            <p>Ég er 24 ára nemi í tölvunarfræði við Háskóla Íslands og bý í Garðabæ. Ég bjó einnig í Montreal frá 2020 til 2023.
-                Ég stunda íþróttir eins og íshokkí, knattspyrnu og golf. Ég er samviskusamur í starfi, með hreint sakavottorð og reyklaus. 
+            <p>Ég er 24 ára nemi í tölvunarfræði við Háskóla Íslands og bý í Garðabæ. Ég bjó einnig í Montreal frá 2020
+                til 2023.
+                Ég stunda íþróttir eins og íshokkí, knattspyrnu og golf. Ég er samviskusamur í starfi, með hreint
+                sakavottorð og reyklaus.
             </p>
         </section>
 
@@ -35,9 +50,11 @@
                 <h3>Verkefnastjóri í bæjarslætti (skrifstofuvinna)</h3>
                 <p><strong>Garðlist ehf</strong> – Reykjavík (Maí 2021 – September 2024)</p>
                 <ul>
-                    <li>Þjálfun og eftirlit með starfsfólki, samhæfing vinnuvéla, samskipti og tilkynningar til verkkaupa. Eftirlit með framvindu verkefna.</li>
+                    <li>Þjálfun og eftirlit með starfsfólki, samhæfing vinnuvéla, samskipti og tilkynningar til
+                        verkkaupa. Eftirlit með framvindu verkefna.</li>
                     <li>Útlhuta verkefnum, sinna tímauppgjöri og reikningagerð</li>
-                    <li>Tók þátt í þróun á vefsjá og aðstoðaði við gerð á skýrslum í Power BI. Vakti áhuga minn á að vinna í upplýsingatækni</li>
+                    <li>Tók þátt í þróun á vefsjá og aðstoðaði við gerð á skýrslum í Power BI. Vakti áhuga minn á að
+                        vinna í upplýsingatækni</li>
                     <li>Frá 10-25% bæting á árangri deildar milli ára</li>
                     <li>Tók einnig að mér stýringu á snjómokstursvöktum í afleysingum</li>
                 </ul>
@@ -109,12 +126,17 @@
             <div class="reference">
                 <h3>Arnar Ingi Sævarsson</h3>
                 <p>Deildarstjóri stjórnstöðva @ Icelandia - Sími: 615-4535 - Tölvupóstur: arnars@icelandia.is</p>
-                
+
             </div>
-   
+
         </section>
+
+
 
     </div>
 
+    <script src="script.js"></script>
+
 </body>
+
 </html>

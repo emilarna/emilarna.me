@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Emil Árnason - Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+    <script src="script.js"></script>
 </head>
 <body>
 
     <div class="resume-container">
-        <a href="index.html">Íslenska</a>
-        <a href="index-fr.html">Français</a>
+        <a href="index.html" id="page-language"><img src="img/iceland.png" alt=""></a>
+        <a href="index-fr.html" id="page-language"><img src="img/france.jpeg" alt=""></a>
+        <button id="download-btn" title="Download Resume"><img src="img/download.png" alt="Download"></button>
+
         <header class="header">
             <h1>Emil Árnason</h1>
             <p>Computer Science student</p>
@@ -110,6 +115,6 @@
         </section>
 
     </div>
-
+<script src="script.js"></script>
 </body>
 </html>
