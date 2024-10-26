@@ -22,7 +22,6 @@ function calculateAge(birthDate) {
     let age = today.getFullYear() - birthDateObj.getFullYear();
     const monthDiff = today.getMonth() - birthDateObj.getMonth();
 
-    // Adjust age if the current month/day is before the birth month/day
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
         age--;
     }
