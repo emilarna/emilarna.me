@@ -16,4 +16,18 @@ function downloadResume() {
     }).save();
 }
 
+function calculateAge(birthDate) {
+    const today = new Date();
+    const birthDateObj = new Date(birthDate);
+    let age = today.getFullYear() - birthDateObj.getFullYear();
+    const monthDiff = today.getMonth() - birthDateObj.getMonth();
+
+    // Adjust age if the current month/day is before the birth month/day
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
+        age--;
+    }
+    return age;
+}
+
 document.getElementById('download-btn').addEventListener('click', downloadResume);
+document.getElementById('age').textContent = calculateAge('1999-11-22');
