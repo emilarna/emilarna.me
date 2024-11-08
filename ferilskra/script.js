@@ -1,4 +1,9 @@
-function downloadResume() {
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+async function downloadResume() {
     const language = document.documentElement.lang || 'is'; 
 
     const resume = document.querySelector('.resume-container');
@@ -8,6 +13,7 @@ function downloadResume() {
     const noPrintElements = clone.querySelectorAll('.no-print');
     noPrintElements.forEach(el => el.remove());
 
+    await sleep(0);
     html2pdf().from(clone).set({
         margin: 0.5,
         filename: `Emil_Arnason_CV_${language}.pdf`, 
@@ -27,6 +33,19 @@ function calculateAge(birthDate) {
     }
     return age;
 }
+
+
+
+const downloadBtn = document.getElementById('download-btn');
+
+downloadBtn.addEventListener('click', () => {
+
+    setTimeout(() => {
+        downloadBtn.classList.add('clicked');
+    }, 0);
+});
+
+
 
 document.getElementById('download-btn').addEventListener('click', downloadResume);
 document.getElementById('age').textContent = calculateAge('1999-11-22');

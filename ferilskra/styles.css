@@ -88,21 +88,11 @@ ul li {
     list-style-type: none;
 }
 
-#download-btn {
-    background: none;
-    border: none;
-    padding: 0; 
-    border-radius: 50%;
-    overflow: hidden;
-    float: right;
-    cursor: pointer;
-    position: relative;
-    
-}
+
 
 #download-btn img {
-    height: 35px;
-    width: 35px;
+    height: 100%;
+    width: 30px;
     display: block; 
     border-radius: 50%; 
     
@@ -128,8 +118,85 @@ ul li {
     }
 }
 
+#download-btn {
+  float: right;
+  background: #8edf8e;
+  border: none;
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#download-btn:hover {
+  background: #cad1d8;
+  transform: scale(1.1);
+}
+
+#download-btn:active {
+  transform: scale(0.95);
+}
+
+.download-icon {
+  font-size: 24px;
+  color: white;
+  transition: opacity 0.2s ease;
+}
 
 
+#download-btn:before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease;
+  opacity: 0;
+}
+
+#download-btn:active:before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+
+#download-btn.spinning .download-icon {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+#download-btn.clicked .download-icon {
+  opacity: 0; 
+}
+
+#download-btn.clicked:before {
+  content: "✓"; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  background: green;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
 
 
 
