@@ -39,6 +39,8 @@ function calculateAge(birthDate) {
 const downloadBtn = document.getElementById('download-btn');
 
 downloadBtn.addEventListener('click', () => {
+    downloadBtn.disabled = true;
+
 
     setTimeout(() => {
         downloadBtn.classList.add('clicked');
