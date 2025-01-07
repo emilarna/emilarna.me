@@ -74,6 +74,10 @@ ul li {
     margin-bottom: 8px;
 }
 
+.skills {
+    page-break-inside: avoid;
+}
+
 .skills ul {
     display: flex;
     flex-wrap: wrap;
