@@ -5,22 +5,39 @@ function sleep(ms) {
 
 async function downloadResume() {
     const language = document.documentElement.lang || 'is'; 
-
     const resume = document.querySelector('.resume-container');
-
     const clone = resume.cloneNode(true);
 
+    // Remove no-print elements
     const noPrintElements = clone.querySelectorAll('.no-print');
     noPrintElements.forEach(el => el.remove());
 
+    // Wait for DOM to settle
     await sleep(0);
+
+    // Measure the height of the content
+    const elementWidth = resume.offsetWidth;
+    const elementHeight = resume.offsetHeight;
+
+    const pdfWidthInInches = 8.5;
+    const pxPerInch = 96;
+    const pdfHeightInInches = elementHeight / pxPerInch;
+
     html2pdf().from(clone).set({
-        margin: 0.5,
-        filename: `Emil_Arnason_CV_${language}.pdf`, 
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        margin: 0,
+        filename: `Emil_Arnason_CV_${language}.pdf`,
+        html2canvas: {
+            scale: 2,
+            useCORS: true
+        },
+        jsPDF: {
+            unit: 'in',
+            format: [pdfWidthInInches, pdfHeightInInches], // dynamic height
+            orientation: 'portrait'
+        }
     }).save();
 }
+
 
 function calculateAge(birthDate) {
     const today = new Date();
