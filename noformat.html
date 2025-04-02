@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Emil Árnason - Resume</title>
+    <link rel="stylesheet" href="/ferilskra/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <div class="resume-container">
-
+        <div class="no-print">
+            <a href="/ferilskra/is/" id="page-language"><img src="/ferilskra/img/iceland.png" alt=""></a>
+            <a href="/ferilskra/fr/" id="page-language"><img src="/ferilskra/img/france.jpeg" alt=""></a>
+            <button id="download-btn" title="Download resume"><img src="/ferilskra/img/download.png" alt="Download"></button>
+        </div>
 
         <header class="header">
             <h1>Emil Árnason</h1>
-            <p>Data Enthusiast | Computer Science Student</p>
+            <p>Computer Science Student</p>
             <div class="contact-info">
                 <p>Email: emil.arna@gmail.com</p>
                 <p>Phone: (+354) 772-4557</p>
@@ -20,41 +26,44 @@
         </header>
 
         <section class="summary">
-            <h2>About Me</h2>
+            <h2>Profile</h2>
             <p>
-                Detail-oriented and adaptable Computer Science student with a strong background in financial data analysis, data processing, and report building. Skilled in Microsoft Excel, SQL, and Power BI, with experience in compensation calculations and operational analytics. Passionate about business analytics and leveraging data-driven insights to optimize operations. Fluent in English and proficient in French.
+                Data-driven Computer Science student with strong experience in data analytics, project coordination, and tech-enabled operations. Skilled in Python, SQL, Power BI, and Excel. Passionate about software development, data analytics and helping teams use data to drive better decisions. Seeking junior developer, data analyst, or IT support roles in Montreal.
             </p>
         </section>
+        
 
         <section class="experience">
             <h2>Work Experience</h2>
             
             <div class="job">
+                <h3>Division Manager</h3>
+                <p><strong>Productive Playhouse</strong> – Remote (February 2025 – Present)</p>
+                <ul>
+                    <li>Oversee a team of 10+ linguists and annotators on data labelling projects.</li>
+                    <li>Keep track of project progress</li>
+                    <li>Utilize project management tools (Jira) to manage workflow and performance.</li>
+                    <li>Maintaining quality control of tasks</li>
+                </ul>
+            </div>
+            <div class="job">
                 <h3>Project Manager</h3>
                 <p><strong>Garðlist ehf</strong> – Reykjavík (May 2021 – September 2024)</p>
                 <ul>
-                    <li>Coordinated and optimized data workflows to improve team efficiency by 25% year-over-year.</li>
+                    <li>Coordinated and optimized workflows to improve team efficiency by 25% year-over-year.</li>
                     <li>Developed Excel-based reports to track revenue, employee performance, and profitability.</li>
                     <li>Developed Power BI dashboards to visualize project progress, enhancing decision-making.</li>
                     <li>Calculated commission payouts and employee earnings for lawn mowing and landscaping projects.</li>
                     <li>Supervised cross-functional teams, ensuring alignment with project objectives.</li>
                 </ul>
             </div>
-            <div class="job">
-                <h3>AI Model-Training Engineer</h3>
-                <p><strong>Scale</strong> – Remote (November 2024 – Present)</p>
-                <ul>
-                    <li>Designed and implemented data pipelines to improve AI model training workflows.</li>
-                    <li>Collaborated with cross-functional teams to annotate and validate high-quality datasets.</li>
-                    <li>Ensured data quality and optimized processes for enhanced AI performance.</li>
-                </ul>
-            </div>
+            
 
             <div class="job">
-                <h3>Data Annotation Specialist</h3>
+                <h3>Transcriber</h3>
                 <p><strong>Productive Playhouse</strong> – Los Angeles, CA (Feb 2022 – July 2024)</p>
                 <ul>
-                    <li>Annotated large datasets in Icelandic to train text-to-speech AI models with high accuracy.</li>
+                    <li>Transcribed public audio in Icelandic to train text-to-speech AI models with high accuracy.</li>
                     <li>Collaborated with teams to ensure data quality and consistency.</li>
                 </ul>
             </div>
@@ -64,30 +73,53 @@
             <h2>Education</h2>
             <div class="education-item">
                 <h3>Bachelor of Science in Computer Science</h3>
-                <p><strong>University of Iceland</strong> – Reykjavík (2022 – Expected 2025)</p>
+                <p><strong>University of Iceland</strong> – Reykjavík (2022 – 2025)</p>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Arts in History</h3>
+                <p><strong>University of Iceland</strong> – Reykjavík (2019 – 2022)</p>
+            </div>
+            <div class="education-item">
+            <h3>College Diploma</h3>
+            <p><strong>Fjölbrautaskólinn í Garðabæ</strong> – Garðabær (2015 – 2018)</p>
             </div>
         </section>
 
         <section class="skills">
             <h2>Technical Skills</h2>
             <ul>
-                <li>Power BI, Microsoft Excel</li>
-                <li>Python, PostgreSQL</li>
-                <li>Data Analytics</li>
-                <li>Microsoft 365</li>
-                <li>Web Development</li>
-                <li>Data Annotation and Labeling Tools</li>
+                <li><strong>Languages & Tools:</strong> Python, JavaScript, SQL, Git, HTML/CSS</li>
+                <li><strong>Data & Analytics:</strong> Power BI, Excel, PostgreSQL</li>
+                <li><strong>Frameworks:</strong> Django, Node.js</li>
+                <li><strong>Other Tools:</strong> Microsoft 365, JIRA, Trello, Slack</li>
+                <li><strong>Concepts:</strong> APIs, REST, Agile/Scrum, Version Control</li>
             </ul>
         </section>
 
-        <section class="skills">
-            <h2>Languages</h2>
+        <section class="certifications">
+            <h2>Courses and Certifications</h2>
             <ul>
-                <li>Icelandic 🇮🇸</li>
-                <li>English 🇬🇧</li>
-                <li>French 🇫🇷</li>
+                <li><strong>Dale Carnegie Training:</strong> Completed a personal development course focused on communication, leadership, and interpersonal effectiveness.</li>
             </ul>
         </section>
+        
+        
+
+        <section class="skills languages">
+            <h2>Languages</h2>
+            <p>Icelandic 🇮🇸 (native), English 🇬🇧 (fluent), French 🇫🇷 (intermediate)</p>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Personal Website:</strong> Designed and built a multilingual resume site using HTML/CSS/JS and GitHub Pages.</li>
+                <li><strong>Task Tracker:</strong> Built a responsive task management web app using Python Django with integrated currency conversion APIs to calculate task earnings in multiple currencies, real-time earnings dashboard using Chart.js.</li>
+                <li><strong>Hockey Stats Tracker:</strong> Built a personal stats tracker web app using Python Django.</li>
+                <li><strong>Data Dashboard:</strong> Developed an interactive Power BI dashboard to analyze project KPIs for a landscaping company.</li>
+            </ul>
+        </section>
+        
 
         <section class="references">
             <h2>References</h2>
@@ -97,5 +129,6 @@
             </div>
         </section>
     </div>
+    <script src="/ferilskra/script.js"></script>
 </body>
 </html>
