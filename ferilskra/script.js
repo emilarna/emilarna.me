@@ -31,8 +31,8 @@ async function downloadResume() {
             useCORS: true
         },
         jsPDF: {
-            unit: 'in',
-            format: [pdfWidthInInches, pdfHeightInInches], // dynamic height
+            unit: 'px',
+            format: [1100,1900], // dynamic height
             orientation: 'portrait'
         }
     }).save();
