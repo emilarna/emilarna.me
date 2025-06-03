@@ -32,7 +32,7 @@ async function downloadResume() {
         },
         jsPDF: {
             unit: 'px',
-            format: [1000,1900], // dynamic height
+            format: [1000,1950], // dynamic height
             orientation: 'portrait'
         }
     }).save();
